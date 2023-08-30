@@ -1,0 +1,111 @@
+.job-card-container {
+  /* border: 2px solid red; */
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #272727;
+  cursor: pointer;
+}
+
+.job-card-icon-and-title-and-rating-container {
+  /* border: 2px solid yellow; */
+  background-color: #272727;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  align-items: flex-start;
+  /* padding: 10px; */
+}
+
+.company-logo-container {
+  /* border: 2px solid green; */
+  margin-right: 10px;
+}
+
+.job-card-company-logo {
+  height: 50px;
+  width: 50px;
+}
+
+.job-card-title-and-rating-container {
+  /* border: 2px solid pink; */
+  padding: 0px;
+}
+
+.job-card-title {
+  color: #fff;
+  margin: 0px;
+  font-weight: bold;
+}
+
+.job-card-star-icon {
+  color: goldenrod;
+}
+
+.star-icon-and-rating-container {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.job-card-rating-para {
+  color: #fff;
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.job-card-location-and-job-type-container {
+  border-bottom: 2px solid #64748b;
+  background-color: #272727;
+  display: flex;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+
+.location-and-employment-type-container {
+  display: flex;
+}
+
+.location-icon-and-location-para-container {
+  display: flex;
+  margin-right: 15px;
+}
+
+.job-card-location-para {
+  margin: 0px;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.location-icon {
+  color: #fff;
+  height: 22px;
+  width: 20px;
+}
+
+.job-card-description {
+  color: #f8fafc;
+  margin: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .job-card-description {
+    font-size: 18px;
+  }
+}
+
+.description-para {
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .description-para {
+    font-size: 22px;
+  }
+}
