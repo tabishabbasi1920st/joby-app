@@ -123,7 +123,7 @@ export default class JobItemDetails extends Component {
     return (
       <>
         <div className="similar-jobs-heading-container">
-          <p className="similar-jobs-para">Similar Jobs</p>
+          <h1 className="similar-jobs-para">Similar Jobs</h1>
         </div>
         <ul className="similar-jobs-card-container">
           {similarJobDetailsList.map(eachObj => (
@@ -132,12 +132,12 @@ export default class JobItemDetails extends Component {
                 <div className="company-logo-container">
                   <img
                     src={eachObj.companyLogoUrl}
-                    alt="job details company logo"
+                    alt="similar job company logo"
                     className="job-card-company-logo"
                   />
                 </div>
                 <div className="job-card-title-and-rating-container">
-                  <p className="job-card-title">{eachObj.title}</p>
+                  <h1 className="job-card-title">{eachObj.title}</h1>
                   <div className="star-icon-and-rating-container">
                     <FaStar className="job-card-star-icon" />
                     <p className="job-card-rating-para">{eachObj.rating}</p>
@@ -156,7 +156,7 @@ export default class JobItemDetails extends Component {
                   </p>
                 </div>
               </div>
-              <p className="description-para">Description</p>
+              <h1 className="description-para">Description</h1>
               <p className="job-card-description">{eachObj.jobDescription}</p>
             </li>
           ))}
@@ -185,35 +185,37 @@ export default class JobItemDetails extends Component {
                 <li key={eachObj.name} className="each-skills-container">
                   <img
                     src={eachObj.image_url}
-                    alt=""
+                    alt={eachObj.name}
                     className="job-details-skills-img"
                   />
                   <p className="job-details-skills-name">{eachObj.name}</p>
                 </li>
               ))}
             </ul>
-            <p className="job-details-life-at-company-para">Life at Company</p>
+            <h1 className="job-details-life-at-company-para">
+              Life at Company
+            </h1>
             <div className="life-at-company-main-container">
               <p className="job-details-life-at-company-description">
                 {lifeAtCompany.description}
               </p>
               <img
                 src={lifeAtCompany.image_url}
-                alt=""
+                alt="life at company"
                 className="job-details-life-at-company-img"
               />
             </div>
           </>
         )
       case apiStatusConstants.failure:
-        return this.renderJobDetailsFailureView()
+        return this.renderJobsFailureView()
       default:
         return null
     }
   }
 
   render() {
-    const {jobDetailsObj, similarJobDetailsList} = this.state
+    const {jobDetailsObj} = this.state
     const {
       companyLogoUrl,
       companyWebsiteUrl,
@@ -264,9 +266,8 @@ export default class JobItemDetails extends Component {
             <p className="package">{packagePerAnnum}</p>
           </div>
           <div className="description-para-and-website-link-container">
-            <p className="description-para">Description</p>
+            <h1 className="description-para">Description</h1>
             <div style={{display: 'flex', alignItems: 'center'}}>
-              <p className="visit-anchor">Visit</p>
               <a
                 className="visit-anchor"
                 href={companyWebsiteUrl}
@@ -277,11 +278,12 @@ export default class JobItemDetails extends Component {
                   className="link-icon"
                   onClick={this.onClickUrlArrow}
                 />
+                Visit
               </a>
             </div>
           </div>
           <p className="job-card-description">{jobDescription}</p>
-          <p className="job-details-skills-heading">Skills</p>
+          <h1 className="job-details-skills-heading">Skills</h1>
           {this.renderSkills()}
         </div>
 

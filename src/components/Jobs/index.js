@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import {Component} from 'react'
-import {FiSearch} from 'react-icons/fi'
+import {BsSearch} from 'react-icons/bs'
 import Cookies from 'js-cookie'
 
 import Loader from 'react-loader-spinner'
@@ -151,7 +151,7 @@ export default class Jobs extends Component {
         />
         <div className="search-icon-container">
           <button type="button" data-testid="searchButton">
-            <FiSearch
+            <BsSearch
               className="search-icon"
               onClick={this.onClickSearchIcon}
             />
