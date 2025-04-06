@@ -5,8 +5,8 @@ import './index.css'
 
 export default class Login extends Component {
   state = {
-    usernameInput: '',
-    passwordInput: '',
+    usernameInput: 'rahul',
+    passwordInput: 'rahul@2021',
     isCredentialValid: true,
     errorText: '',
   }
