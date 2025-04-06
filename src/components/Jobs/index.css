@@ -35,7 +35,8 @@
 
 @media screen and (min-width: 768px) {
   .job-content-container {
-    width: 40%;
+    min-width: 25%;
+    max-width:25%;
     padding: 15px;
   }
 }

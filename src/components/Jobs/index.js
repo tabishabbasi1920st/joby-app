@@ -138,29 +138,6 @@ export default class Jobs extends Component {
 
   onClickSearchIcon = () => this.getJobsDetails()
 
-  renderSearchBox = () => {
-    const {searchInput} = this.state
-    return (
-      <div className="search-box-container">
-        <input
-          placeholder="Search"
-          type="search"
-          className="search-input"
-          onChange={this.onChangeSearchInput}
-          value={searchInput}
-        />
-        <div className="search-icon-container">
-          <button type="button" data-testid="searchButton">
-            <BsSearch
-              className="search-icon"
-              onClick={this.onClickSearchIcon}
-            />
-          </button>
-        </div>
-      </div>
-    )
-  }
-
   renderLoader = () => (
     <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
@@ -323,7 +300,6 @@ export default class Jobs extends Component {
         <Header />
         <div className="job-bg-content-container">
           <div className="job-content-container">
-            {this.renderSearchBox()}
             <div className="user-profile-holder-container">
               {this.renderUserProfile()}
             </div>
